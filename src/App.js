@@ -10,13 +10,14 @@ class App extends Component {
   }
 
   renderPosts(post) {
-    return <div key={post.id}>
+    return (<div key={post.id}>
     <h2 dangerouslySetInnerHTML={{__html: post.title.rendered}} />
     <p dangerouslySetInnerHTML={{__html: post.content.rendered}} />
-    </div>
+    </div>)
   }
 
   componentDidMount() {
+    console.log("component did mount")
     const headers = new Headers({
       'Content-Type': 'application/json',
     });
