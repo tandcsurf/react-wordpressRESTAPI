@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super()
     this.state = {
@@ -15,6 +15,7 @@ class App extends Component {
     <p dangerouslySetInnerHTML={{__html: post.content.rendered}} />
     </div>)
   }
+
 
   componentDidMount() {
     console.log("component did mount")
@@ -39,5 +40,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
